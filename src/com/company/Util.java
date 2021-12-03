@@ -37,11 +37,48 @@ public class Util {
         return increase;
     }
 
+    // Day two Part 1
+    public static int getDirectionPart1(List<String> y){
+        int position = 0;
+        int depth = 0;
+        for(String string : y){
+            var split = string.split(" ");
+            if (split[0].equals("down")){
+                depth += Integer.parseInt(split[1]);
+            }else if (split[0].equals("up")){
+                depth -= Integer.parseInt(split[1]);
+            }else if (split[0].equals("forward")){
+                position += Integer.parseInt(split[1]);
+            }
+         }
+        return position * depth;
+    }
+
+    // Day two part 2
+    public static int getDirectionPart2(List<String> y){
+        int position = 0;
+        int depth = 0;
+        int aim = 0;
+        for(String string : y){
+            var split = string.split(" ");
+            if (split[0].equals("down")){
+                aim += Integer.parseInt(split[1]);
+            }else if (split[0].equals("up")){
+                aim -= Integer.parseInt(split[1]);
+            }else if (split[0].equals("forward")){
+                position += Integer.parseInt(split[1]);
+                depth += aim * Integer.parseInt(split[1]);
+            }
+        }
+            return position * depth;
+    }
+
+
 
     // Read file and return a list of integers
     public static List<Integer> readFileInt() {
 
-        File file = new File("src/com/company/input.txt");
+        File file = new File("src/com/company/instructions/day1/input.txt");
         Scanner scanner = null;
         try {
             scanner = new Scanner(file);
@@ -57,6 +94,26 @@ public class Util {
             }
         }
         return integers;
+    }
+    // Create a list of string for parsing file
+    public static List<String> readFileString(){
+
+        File file = new File("src/com/company/instructions/day2/input2.txt");
+        Scanner scanner = null;
+        try {
+            scanner = new Scanner(file);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        List<String> strings = new ArrayList<>();
+        while (scanner.hasNext()) {
+            if (scanner.hasNextLine()) {
+                strings.add(scanner.nextLine());
+            } else {
+                scanner.next();
+            }
+        }
+        return strings;
     }
 
 }

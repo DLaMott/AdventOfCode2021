@@ -10,11 +10,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // Grab list from file
+        // Create lists needed from files
         var something = Util.readFileInt();
+        var something2 = Util.readFileString();
         // Display results to console
         System.out.println(Util.getSumofIncreasePart1(something));
         System.out.println(Util.getSumOfIncreasePart2(something));
+        System.out.println(Util.getDirectionPart1(something2));
+        System.out.println(Util.getDirectionPart2(something2));
     }
 
 
