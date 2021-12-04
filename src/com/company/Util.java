@@ -1,11 +1,14 @@
 package com.company;
 
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
+
 
 public class Util {
 
@@ -174,4 +177,5 @@ public class Util {
         }
         return strings;
     }
+
 }
