@@ -132,9 +132,9 @@ public class Util {
 
     // Read file and return a list of integers
     // Enter correct file for testing
-    public static List<Integer> readFileInt() {
+    public static List<Integer> readFileInt(String string) {
         // Todo: change to auto place correct file
-        File file = new File("src/com/company/instructions/day1/input.txt");
+        File file = new File(string);
         Scanner scanner = null;
         try {
             scanner = new Scanner(file);
@@ -156,9 +156,10 @@ public class Util {
 
     // Create a list of string for parsing file
     // Enter correct file for testing
-    public static List<String> readFileString() {
+    public static List<String> readFileString(String string) {
+
         // Todo: change to auto place correct file
-        File file = new File("src/com/company/instructions/day3/input3.txt");
+        File file = new File(string);
         Scanner scanner = null;
         try {
             scanner = new Scanner(file);
@@ -177,5 +178,4 @@ public class Util {
         }
         return strings;
     }
-
 }
