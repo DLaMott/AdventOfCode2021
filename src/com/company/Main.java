@@ -1,11 +1,7 @@
 package com.company;
 
 import com.company.dayFive.day5Parts;
-import com.company.dayFour.Day4Calc;
-
-import java.io.File;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 // Advent of code 2021
 
